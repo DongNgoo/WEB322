@@ -6,7 +6,7 @@ No part of this assignment has been copied manually or electronically from any o
 Name: Dong Ngo
 Student ID: 129432233
 Date: 2024/10/14
-Vercel Web App URL: 
+Vercel Web App URL: https://web-322-demo.vercel.app/
 GitHub Repository URL: git@github.com:DongNgoo/WEB322.git
 
 ********************************************************************************/ 
