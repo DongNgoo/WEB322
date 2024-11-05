@@ -53,10 +53,61 @@ function getCategories() {
         }
     });
 }
+// Function to get items by category
+function getItemsByCategory(category) {
+    return new Promise((resolve, reject) => {
+        const filteredItems = items.filter(item => item.category == category);
+        if (filteredItems.length > 0) {
+            resolve(filteredItems);
+        } else {
+            reject("no results returned");
+        }
+    });
+}
+// Function to get items by minimum date
+function getItemsByMinDate(minDateStr) {
+    return new Promise((resolve, reject) => {
+        const filteredItems = items.filter(item => new Date(item.postDate) >= new Date(minDateStr));
+        if (filteredItems.length > 0) {
+            resolve(filteredItems);
+        } else {
+            reject("no results returned");
+        }
+    });
+}
+function getItemById(id) {
+    return new Promise((resolve, reject) => {
+        const item = items.find(item => item.id == id);
+        if (item) {
+            resolve(item);
+        } else {
+            reject("no result returned");
+        }
+    });
+}
+function addItem(itemData) {
+    return new Promise((resolve, reject) => {
+        // Set "published" to true if defined, otherwise false
+        itemData.published = itemData.published !== undefined;
+
+        // Set the item's ID to the length of the items array plus 1
+        itemData.id = items.length + 1;
+
+        // Push the itemData into the items array
+        items.push(itemData);
+
+        // Resolve the promise with the new item data
+        resolve(itemData);
+    });
+}
 
 module.exports = {
     initialize,
     getAllItems,
+    getItemById,
     getPublishedItems,
-    getCategories
+    getCategories,
+    getItemsByCategory,
+    getItemsByMinDate,
+    addItem
 };
