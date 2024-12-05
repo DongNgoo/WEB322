@@ -44,6 +44,7 @@ const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
 app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 //This will add the property "activeRoute" to "app.locals" whenever the route changes, i.e. if our route is "/store/5", the app.locals.activeRoute value will be "/store".  Also, if the shop is currently viewing a category, that category will be set in "app.locals".
 app.use(function (req, res, next) {
@@ -93,6 +94,7 @@ app.engine(
 );
 
 app.set("view engine", ".hbs");
+app.set('views', __dirname + '/views');
 // GET /categories/add
 app.get('/categories/add', (req, res) => {
   res.render('addCategory');
