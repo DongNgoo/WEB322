@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Items</h2>
+    <a href="/Items/add" class="btn btn-success pull-right">Add Item</a>
+    <hr />
+
+    <div class="table-responsive">
+      <table class="table ">
+        <thead>
+          <tr>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Category</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each items}}
+            <tr>
+              <td>{{id}}</td>
+              <td>{{name}}</td>
+              <td>{{category}}</td>
+              <td>
+                <a href="/Items/delete/{{id}}" class="btn btn-danger">Remove</a>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  {{#unless items}}
+    <div class="col-md-12 text-center">
+      <strong>No Items</strong>
+    </div>
+  {{/unless}}
+</div>
