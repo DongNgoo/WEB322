@@ -6,7 +6,7 @@
 * 
 *  Name: Dong/Lynne Ngo Student ID: 129432233 Date: 2024-12-05
 *
-*  Vercel Web App URL: ________________________________________________________
+*  Vercel Web App URL: https://web-322-yf8u.vercel.app/about
 *
 *  GitHub Repository URL: https://github.com/DongNgoo/WEB322.git
 *
