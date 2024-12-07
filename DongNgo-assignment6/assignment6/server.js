@@ -114,6 +114,9 @@ app.engine(
 
 app.set("view engine", ".hbs");
 app.set('views', __dirname + '/views');
+app.get("/", (req, res) => {
+    res.redirect("/about");
+  });
 // GET /login
 app.get('/login', function(req, res) {
     res.render('login');
@@ -199,9 +202,7 @@ app.get('/Items/delete/:id', ensureLogin, (req, res) => {
       res.status(500).send('Unable to Remove Item / Item not found');
     });
 });
-app.get("/", (req, res) => {
-  res.redirect("/about");
-});
+
 
 app.get("/about", (req, res) => {
   res.render("about");
