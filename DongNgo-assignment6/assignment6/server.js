@@ -45,7 +45,7 @@ const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
 app.use(express.static("public"));
-app.use(express.static(__dirname + '/public'));
+
 const session = clientSessions({
     cookieName: 'session',
     secret: 'your_secret_key_here',
@@ -114,6 +114,7 @@ app.engine(
 
 app.set("view engine", ".hbs");
 app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/public'));
 app.get("/", (req, res) => {
     res.redirect("/about");
   });
