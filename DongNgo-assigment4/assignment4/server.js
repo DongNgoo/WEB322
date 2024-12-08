@@ -8,11 +8,11 @@ distributed to other students. I acknoledge that violation of this policy
 to any degree results in a ZERO for this assignment and possible failure of
 the course. 
 
-Name:   
-Student ID:   
-Date:  
-Cyclic Web App URL:  
-GitHub Repository URL:  
+Name: Dong Ngo   
+Student ID:   129432233
+Date: 2024-12-07 
+Cyclic Web App URL:  https://web-322-assignment4-five.vercel.app/
+GitHub Repository URL:  https://github.com/DongNgoo/WEB322.git
 
 ********************************************************************************/
 
